@@ -1,0 +1,12 @@
+Tampering Vulnerability and Prevention:
+
+Explanation of Vulnerability:
+The identified weakness within the code is attributed to insufficient input cleansing on the `/register` endpoint. This deficiency permits the acceptance of user inputs without undergoing necessary checks or cleansing, exposing the application to risks of HTML injection. Such oversights allow attackers the opportunity to embed harmful HTML or JavaScript, creating vulnerabilities for Cross-Site Scripting (XSS) attacks due to inadequate input purification.
+
+Prevention in Secure Code Implementation:
+In the enhanced, secure code version, the introduction of an `escapeHTML` utility plays a pivotal role. This utility efficiently neutralizes special HTML symbols like `<`, `>`, `&`, `"`, and `'` found in user submissions prior to their display on the client-side. By converting these characters into harmless text representations, the improved code variant effectively nullifies the threat posed by any HTML or JavaScript injections, thereby averting possible XSS exploits.
+
+Violation of CIA Property by Tampering:
+
+Impact of Tampering on CIA (Confidentiality, Integrity, and Availability) Properties:
+- Integrity: The act of tampering undermines data integrity by facilitating unauthorized alterations. The observed deficiency in input cleansing enables assailants to manipulate the application’s content or operational aspects through malicious scripting. The adoption of stringent input verification and cleansing protocols is essential for preserving data integrity, thereby guaranteeing the precision and trustworthiness of the application’s information.
