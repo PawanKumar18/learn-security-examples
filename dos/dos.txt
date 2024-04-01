@@ -1,2 +1,8 @@
 - Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+The omission of error management within the script named insecure.js presents a security vulnerability, as errors arising from database operations might lead to server downtime, thus denying service to authentic users.
+
+In the context of the CIA triad, Availability suffers as a result of this issue.
+
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+Enhancing security could be achieved by integrating data cleansing and employing try/catch mechanisms for managing exceptions, which would aid in diminishing the risks associated with Denial of Service (DOS) attacks. Furthermore, instituting a restriction on the number of requests a server can process within a specific timeframe could serve to distribute incoming traffic across alternate nodes, providing a temporary relief from the strain.

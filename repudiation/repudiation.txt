@@ -1,2 +1,8 @@
 - Briefly explain the vulnerability and why the secure version is better at preventing repudiation than the insecure version.
+The flaw in insecure.js undermines the principle of non-repudiation due to its absence of logging features. Non-repudiation ensures that a party in a transaction cannot deny the authenticity of their actions, making it crucial for security and audit purposes. Without the ability to track user actions, it becomes challenging to verify or prove the involvement of users in specific activities or transactions within the system.
+
+Secure.js rectifies this issue by incorporating middleware that logs details of incoming requests. This enhancement enables the system to maintain a record of user activities, including what actions were performed, when they were done, and by whom. This level of detail is instrumental in supporting non-repudiation, as it provides a verifiable trail of user actions that can be used for auditing, monitoring security, and resolving disputes. Consequently, the introduction of logging functionality in secure.js significantly strengthens the system's security posture by ensuring accountability and transparency of user actions.
+
+
 - What additional security mechanisms can you incorporate to prevent such attacks?
+We can use authentication mechanisms like 2FA, OAuth2.0 or OTP verificiation systems
